@@ -1,14 +1,34 @@
 <style>
-  html,body{margin:0;height:100%;background:#000;overflow:hidden}
-  .wrap{position:fixed; inset:0; overflow:hidden; background:#000}
-  /* เรนเดอร์เล็กลง โดยตั้งให้ iframe กว้างแค่ 60vw, สูง 60vh แล้วขยายด้วย transform */
+  html,body{
+    margin:0;
+    height:100%;
+    background:#000;
+    overflow:hidden;
+  }
+  .wrap{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    background:#000;
+  }
+  /* Render smaller (60vw x 60vh) and then scale up */
   iframe{
-    position:absolute; top:0; left:0;
-    width:60vw; height:60vh; border:0; background:#000;
-    transform: scale(calc(100 / 60));      /* ขยายกลับให้เต็ม */
+    position:absolute;
+    top:0;
+    left:0;
+    width:60vw;
+    height:60vh;
+    border:0;
+    background:#000;
+    transform: scale(calc(100 / 60));
     transform-origin: top left;
   }
 </style>
+
 <div class="wrap">
-  <iframe src="https://app.powerbi.com/view?r=YOUR_TOKEN&filterPaneEnabled=false&navContentPaneEnabled=false"></iframe>
+  <iframe 
+    title="SX-template"
+    src="https://app.powerbi.com/view?r=eyJrIjoiNmY5YjQyMjEtYmZkNS00OWI3LWIwYjMtNjI4ZWFlOWQxYTgzIiwidCI6ImE0ZTY5NmQ4LTg4OTktNGNhNy1iN2VhLTNiZjY0ODNjYzkwZCIsImMiOjEwfQ%3D%3D&filterPaneEnabled=false&navContentPaneEnabled=false" 
+    allowFullScreen="true">
+  </iframe>
 </div>
